@@ -4,8 +4,8 @@ describe('Todo Utils', () => {
   
   // VOORBEELD - Deze test is al ingevuld om te laten zien hoe het werkt
   test('VOORBEELD: isValidTodo geeft true voor normale tekst', () => {
-    const resultaat = isValidTodo('Boodschappen doen');
-    expect(resultaat).toBe(true);
+    const result = isValidTodo('Boodschappen doen');
+    expect(result).toBe(true);
   });
 
   test('isValidTodo geeft false voor lege string', () => {

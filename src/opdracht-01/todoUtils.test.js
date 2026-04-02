@@ -10,12 +10,15 @@ describe('Todo Utils', () => {
 
   test('isValidTodo geeft false voor lege string', () => {
     // TODO: Test of '' invalid is
-    expect(true).toBe(false); // Deze test faalt! Vervang deze regel met je eigen test
+    const result = validatePassword('')
+    expect(result.isValidTodo).toBe(false)
+
+
   });
 
   test('getTodoPriority geeft high voor urgent', () => {
     // TODO: Test of 'urgent bellen' priority 'high' krijgt
-    expect(true).toBe(false); // Deze test faalt! Vervang deze regel met je eigen test
+    
   });
 
   test('getTodoPriority geeft low voor normale todo', () => {

@@ -27,7 +27,7 @@ describe('Password Validator', () => {
   test('wachtwoord zonder hoofdletter geeft error', () => {
     // TODO: Test of 'welkom123' invalid is
     const result = validatePassword('welkom123')
- expect(result.isValid).toBe(false)
+    expect(result.isValid).toBe(false)
     expect(result.errors).toContain('Moet minimaal 1 hoofdletter bevatten')
   });
 

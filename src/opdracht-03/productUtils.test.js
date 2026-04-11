@@ -17,40 +17,41 @@ describe('Product Utils', () => {
     expect(result[3].name).toBe('Laptop');
   });
 
-  test('filterByCategory geeft alleen electronics terug', () => {
-    // TODO: Filter op category 'electronics'
-    // TODO: Check of er 2 producten terugkomen
-    // Hint: gebruik .toHaveLength(2)
-    const result = sortByPrice(electronics);
-    expect(result).toHaveLength(2);
-    expect(result[0].name).toBe('Muis');
-    expect(result[1].name).toBe('Laptop');
+ test('filterByCategory geeft alleen electronics terug', () => {
 
-   
-  });
+  // TODO: Filter op category 'electronics'
+  const result = filterByCategory(products, 'electronics');
+
+  // TODO: Check of er 2 producten terugkomen
+  expect(result).toHaveLength(2);
+
+  expect(result[0].name).toBe('Laptop');
+  expect(result[1].name).toBe('Muis');
+
+});
 
   test('filterByCategory geeft lege array bij onbekende categorie', () => {
     // TODO: Filter op category 'clothing' (bestaat niet)
-    // TODO: Check of de array leeg is
     const result = filterByCategory(products, 'clothing');
+    // TODO: Check of de array leeg is
     expect(result).toHaveLength(0);
   });
 
   test('searchProducts vindt producten met zoekterm', () => {
     // TODO: Zoek naar 'bureau'
-    // TODO: Check of resultaat 1 product bevat
-    // TODO: Check of dat product 'Bureau' heet
     const result = searchProducts(products, 'bureau');
+    // TODO: Check of resultaat 1 product bevat
     expect(result).toHaveLength(1);
+    // TODO: Check of dat product 'Bureau' heet
     expect(result[0].name).toBe('Bureau');
   });
 
   test('searchProducts is case insensitive', () => {
     // TODO: Zoek naar 'LAPTOP' (hoofdletters)
+     const result = searchProducts(products, 'LAPTOP');
     // TODO: Check of het resultaat 'Laptop' bevat
-    // Hint: gebruik .toHaveLength(1)
-    const result = searchProducts(products, 'LAPTOP');
     expect(result).toHaveLength(1);
+    // Hint: gebruik .toHaveLength(1)
     expect(result[0].name).toBe('Laptop');
   });
 
